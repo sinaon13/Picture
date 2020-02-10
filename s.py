@@ -5,10 +5,11 @@ def sm(img,ij,fl,x,y):
     t=(0,0,0)
     p=-1
     for i in range(j):
-        p+=1
-        t+=img.getpixel(x,y+i-p)
-        t+=img.getpixel(x+i-p,y)
-        
+        for k in range(j):
+            p+=1
+            t+=img.getpixel(x,y+i-p)
+            t+=img.getpixel(x+i-p,y)
+    
 def op(img):
     weight = img.size[0]
     height = img.size[1]
